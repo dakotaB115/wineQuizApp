@@ -29,35 +29,81 @@
         <!--Wine Quizzes-->
         <scene sceneID="Zig-j5-OMc">
             <objects>
-                <viewController title="Wine Quizzes" id="2LV-96-cUa" sceneMemberID="viewController">
+                <viewController title="Wine Quizzes" id="2LV-96-cUa" customClass="QuizzesViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xte-9U-2jF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-Zw-KIg">
-                                <rect key="frame" x="0.0" y="142" width="414" height="671"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-Zw-KIg">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8qn-D2-uzM">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qn-D2-uzM" id="Tkr-tR-h8r">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVZ-6a-3Yj">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nVZ-6a-3Yj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nVZ-6a-3Yj" firstAttribute="trailing" secondItem="odG-mT-asc" secondAttribute="trailing" id="FPJ-xi-vq2"/>
+                            <constraint firstItem="TJ2-Zw-KIg" firstAttribute="top" secondItem="nVZ-6a-3Yj" secondAttribute="bottom" id="GY0-Wh-2EY"/>
+                            <constraint firstItem="TJ2-Zw-KIg" firstAttribute="trailing" secondItem="odG-mT-asc" secondAttribute="trailing" id="Jc1-GU-5VD"/>
+                            <constraint firstItem="nVZ-6a-3Yj" firstAttribute="leading" secondItem="odG-mT-asc" secondAttribute="leading" id="RIP-pX-nYy"/>
+                            <constraint firstItem="TJ2-Zw-KIg" firstAttribute="bottom" secondItem="odG-mT-asc" secondAttribute="bottom" id="UBj-zB-V7p"/>
+                            <constraint firstItem="TJ2-Zw-KIg" firstAttribute="leading" secondItem="odG-mT-asc" secondAttribute="leading" id="Xww-4o-jNe"/>
+                            <constraint firstItem="nVZ-6a-3Yj" firstAttribute="top" secondItem="odG-mT-asc" secondAttribute="top" id="ifa-RM-YlM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="odG-mT-asc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wine Quizzes" id="TBx-PX-lMY"/>
+                    <navigationItem key="navigationItem" title="Title" id="mRo-t0-tdD"/>
+                    <connections>
+                        <segue destination="PeV-Wu-u3U" kind="show" id="oyG-OJ-YXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4X-Lc-5kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="614"/>
+            <point key="canvasLocation" x="756.52173913043487" y="613.39285714285711"/>
+        </scene>
+        <!--Quizz View Controller-->
+        <scene sceneID="gil-s5-8xH">
+            <objects>
+                <viewController id="PeV-Wu-u3U" customClass="QuizzViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AGT-79-d8i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MsT-Tr-NSS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7k-BT-4kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="1304"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="2iR-6X-Dgc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="m73-Fj-lDK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vdI-3X-3nr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8D-D0-wjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-587"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="z4a-Nj-fQi">
             <objects>
-                <viewController id="PnI-uQ-twS" sceneMemberID="viewController">
+                <viewController id="PnI-uQ-twS" customClass="UserProfileViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KIX-9l-ifb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,18 +112,40 @@
                                 <rect key="frame" x="169" y="548" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAa-Ir-sDh" customClass="RoundedButton" customModule="wineQuizApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="749" width="382" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4ia-bi-8BG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="PnI-uQ-twS" eventType="touchUpInside" id="AxO-ON-nsF"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1423170865" green="0.17536127570000001" blue="0.41962963339999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Gjf-qn-bVE" firstAttribute="bottom" secondItem="pAa-Ir-sDh" secondAttribute="bottom" constant="30" id="AYk-uo-rgw"/>
+                            <constraint firstItem="Gjf-qn-bVE" firstAttribute="trailing" secondItem="pAa-Ir-sDh" secondAttribute="trailing" constant="16" id="ND2-mD-zod"/>
+                            <constraint firstItem="pAa-Ir-sDh" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="16" id="VN7-an-UIX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gjf-qn-bVE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="User Profile" id="Qkr-Fe-Obn"/>
+                    <connections>
+                        <segue destination="m73-Fj-lDK" kind="show" identifier="logout" id="joX-Bv-REx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyw-pM-cvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="712" y="-586"/>
+            <point key="canvasLocation" x="711.59420289855075" y="-586.60714285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PHd-Cd-Ef8">
@@ -100,37 +168,120 @@
             </objects>
             <point key="canvasLocation" x="-79" y="17"/>
         </scene>
-        <!--Messaging-->
+        <!--Contacts-->
         <scene sceneID="Lob-Qm-BMD">
             <objects>
-                <viewController id="CQv-89-6pF" sceneMemberID="viewController">
+                <viewController id="CQv-89-6pF" customClass="ContactsViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2b-Tp-iMn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rq5-pg-Xr1">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S8Y-bq-Fu5">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S8Y-bq-Fu5" id="MDc-dz-bqT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQz-oz-Hbc">
+                                                    <rect key="frame" x="348" y="0.0" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-fa-rZo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I9U-GE-vow" firstAttribute="bottom" secondItem="rq5-pg-Xr1" secondAttribute="bottom" id="5vy-PN-SzW"/>
+                            <constraint firstItem="I9U-GE-vow" firstAttribute="trailing" secondItem="rq5-pg-Xr1" secondAttribute="trailing" id="8WS-kt-bdf"/>
+                            <constraint firstItem="7V3-fa-rZo" firstAttribute="top" secondItem="I9U-GE-vow" secondAttribute="top" id="Bcg-2V-jRC"/>
+                            <constraint firstItem="7V3-fa-rZo" firstAttribute="leading" secondItem="I9U-GE-vow" secondAttribute="leading" id="FYf-13-KMC"/>
+                            <constraint firstItem="rq5-pg-Xr1" firstAttribute="leading" secondItem="I9U-GE-vow" secondAttribute="leading" id="U18-Zo-00Q"/>
+                            <constraint firstItem="7V3-fa-rZo" firstAttribute="trailing" secondItem="I9U-GE-vow" secondAttribute="trailing" id="Ymc-4I-pzR"/>
+                            <constraint firstItem="rq5-pg-Xr1" firstAttribute="top" secondItem="7V3-fa-rZo" secondAttribute="bottom" id="zoy-FE-BPp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="I9U-GE-vow"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messaging" id="3O3-7v-MVd"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" id="3O3-7v-MVd"/>
+                    <connections>
+                        <segue destination="EkX-NK-8Ye" kind="show" id="UCM-Oq-DhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j99-kI-XFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1635" y="-334"/>
         </scene>
-        <!--Leaderboards-->
-        <scene sceneID="tax-k4-ve0">
+        <!--Messages View Controller-->
+        <scene sceneID="3Zg-fR-YJf">
             <objects>
-                <viewController id="09n-yq-PRA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="peH-Zn-BxZ">
+                <viewController id="EkX-NK-8Ye" customClass="MessagesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nw5-8x-Ffa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dkZ-84-aeC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fum-5O-awc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="-334"/>
+        </scene>
+        <!--Leaderboards-->
+        <scene sceneID="tax-k4-ve0">
+            <objects>
+                <viewController id="09n-yq-PRA" customClass="LeaderboardsViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="peH-Zn-BxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="o0o-3a-gTU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cme-zH-ZNp">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="44j-32-8oB">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="44j-32-8oB" id="W4e-px-9ph">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cme-zH-ZNp" firstAttribute="trailing" secondItem="Xt0-xN-Q3V" secondAttribute="trailing" id="1Il-zI-f87"/>
+                            <constraint firstItem="cme-zH-ZNp" firstAttribute="leading" secondItem="Xt0-xN-Q3V" secondAttribute="leading" id="Dsv-8o-Dcw"/>
+                            <constraint firstItem="o0o-3a-gTU" firstAttribute="trailing" secondItem="Xt0-xN-Q3V" secondAttribute="trailing" id="MNo-hs-pOD"/>
+                            <constraint firstItem="cme-zH-ZNp" firstAttribute="top" secondItem="o0o-3a-gTU" secondAttribute="bottom" id="U8y-iD-B9N"/>
+                            <constraint firstItem="o0o-3a-gTU" firstAttribute="top" secondItem="Xt0-xN-Q3V" secondAttribute="top" id="cvP-W0-UWF"/>
+                            <constraint firstItem="o0o-3a-gTU" firstAttribute="leading" secondItem="Xt0-xN-Q3V" secondAttribute="leading" id="k9d-br-OsU"/>
+                            <constraint firstItem="cme-zH-ZNp" firstAttribute="bottom" secondItem="Xt0-xN-Q3V" secondAttribute="bottom" id="xKX-HX-QeL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xt0-xN-Q3V"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Leaderboards" id="43s-n0-8jz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rI-4K-TzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="331"/>
+            <point key="canvasLocation" x="1634.7826086956522" y="330.13392857142856"/>
         </scene>
     </scenes>
 </document>

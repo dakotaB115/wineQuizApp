@@ -13,6 +13,18 @@
 		05222C9321ECF7540094802C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222C9021ECF7540094802C /* UIButton.swift */; };
 		05222C9521ED1D530094802C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222C9421ED1D530094802C /* LoginViewController.swift */; };
 		05222C9721ED1E540094802C /* UserScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05222C9621ED1E540094802C /* UserScreens.storyboard */; };
+		05222C9921EE37740094802C /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222C9821EE37740094802C /* CreateUserViewController.swift */; };
+		05222C9F21EE3CC40094802C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222C9E21EE3CC40094802C /* UIColor.swift */; };
+		05222CA121EE417C0094802C /* NavControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA021EE417C0094802C /* NavControllerExtensions.swift */; };
+		05222CA321EE47850094802C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA221EE47850094802C /* UserProfileViewController.swift */; };
+		05222CA521EE479E0094802C /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA421EE479E0094802C /* MessagingViewController.swift */; };
+		05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA621EE47EF0094802C /* LeaderboardsViewController.swift */; };
+		05222CA921EE48000094802C /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA821EE48000094802C /* QuizzesViewController.swift */; };
+		05222CAC21EE758D0094802C /* QuizViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAB21EE758D0094802C /* QuizViewCell.swift */; };
+		05222CAE21EE75AA0094802C /* LeaderboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAD21EE75AA0094802C /* LeaderboardViewCell.swift */; };
+		05222CB021EE75C90094802C /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAF21EE75C90094802C /* ContactsViewCell.swift */; };
+		05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB121EE78AD0094802C /* ContactsViewController.swift */; };
+		05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB321EE790E0094802C /* QuizzViewController.swift */; };
 		052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F7FF321EA990D00F4636D /* AppDelegate.swift */; };
 		052F7FF921EA990E00F4636D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FF721EA990E00F4636D /* Main.storyboard */; };
 		052F7FFB21EA990F00F4636D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FFA21EA990F00F4636D /* Assets.xcassets */; };
@@ -27,6 +39,18 @@
 		05222C9021ECF7540094802C /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		05222C9421ED1D530094802C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		05222C9621ED1E540094802C /* UserScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserScreens.storyboard; sourceTree = "<group>"; };
+		05222C9821EE37740094802C /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		05222C9E21EE3CC40094802C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		05222CA021EE417C0094802C /* NavControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerExtensions.swift; sourceTree = "<group>"; };
+		05222CA221EE47850094802C /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		05222CA421EE479E0094802C /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
+		05222CA621EE47EF0094802C /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
+		05222CA821EE48000094802C /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
+		05222CAB21EE758D0094802C /* QuizViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewCell.swift; sourceTree = "<group>"; };
+		05222CAD21EE75AA0094802C /* LeaderboardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewCell.swift; sourceTree = "<group>"; };
+		05222CAF21EE75C90094802C /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
+		05222CB121EE78AD0094802C /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		05222CB321EE790E0094802C /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 		052F7FF021EA990D00F4636D /* wineQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wineQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		052F7FF321EA990D00F4636D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		052F7FF821EA990E00F4636D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +95,8 @@
 		051E356A21EBD186006F3C29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				05222C9421ED1D530094802C /* LoginViewController.swift */,
+				05222CB621EE7C9C0094802C /* Loginscreens */,
+				05222CB521EE7C890094802C /* Userscreens */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -91,6 +116,8 @@
 				05222C8F21ECF7540094802C /* Create Line.swift */,
 				05222C9021ECF7540094802C /* UIButton.swift */,
 				05222C8E21ECF7540094802C /* UITextField.swift */,
+				05222C9E21EE3CC40094802C /* UIColor.swift */,
+				05222CA021EE417C0094802C /* NavControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -100,6 +127,38 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		05222CAA21EE750F0094802C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05222CAB21EE758D0094802C /* QuizViewCell.swift */,
+				05222CAD21EE75AA0094802C /* LeaderboardViewCell.swift */,
+				05222CAF21EE75C90094802C /* ContactsViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		05222CB521EE7C890094802C /* Userscreens */ = {
+			isa = PBXGroup;
+			children = (
+				05222CA221EE47850094802C /* UserProfileViewController.swift */,
+				05222CA421EE479E0094802C /* MessagingViewController.swift */,
+				05222CA621EE47EF0094802C /* LeaderboardsViewController.swift */,
+				05222CA821EE48000094802C /* QuizzesViewController.swift */,
+				05222CB121EE78AD0094802C /* ContactsViewController.swift */,
+				05222CB321EE790E0094802C /* QuizzViewController.swift */,
+			);
+			path = Userscreens;
+			sourceTree = "<group>";
+		};
+		05222CB621EE7C9C0094802C /* Loginscreens */ = {
+			isa = PBXGroup;
+			children = (
+				05222C9421ED1D530094802C /* LoginViewController.swift */,
+				05222C9821EE37740094802C /* CreateUserViewController.swift */,
+			);
+			path = Loginscreens;
 			sourceTree = "<group>";
 		};
 		052F7FE721EA990D00F4636D = {
@@ -124,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				052F7FFF21EA990F00F4636D /* Info.plist */,
+				05222CAA21EE750F0094802C /* Cells */,
 				051E356D21EBD23E006F3C29 /* Models */,
 				051E356C21EBD21F006F3C29 /* Extensions */,
 				051E356921EBD0CB006F3C29 /* Controllers */,
@@ -277,11 +337,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05222CAE21EE75AA0094802C /* LeaderboardViewCell.swift in Sources */,
+				05222CA921EE48000094802C /* QuizzesViewController.swift in Sources */,
 				05222C9221ECF7540094802C /* Create Line.swift in Sources */,
+				05222CA121EE417C0094802C /* NavControllerExtensions.swift in Sources */,
+				05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */,
+				05222CAC21EE758D0094802C /* QuizViewCell.swift in Sources */,
+				05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */,
+				05222C9F21EE3CC40094802C /* UIColor.swift in Sources */,
+				05222CA521EE479E0094802C /* MessagingViewController.swift in Sources */,
+				05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */,
+				05222CB021EE75C90094802C /* ContactsViewCell.swift in Sources */,
 				052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */,
 				05222C9121ECF7540094802C /* UITextField.swift in Sources */,
 				05222C9521ED1D530094802C /* LoginViewController.swift in Sources */,
 				05222C9321ECF7540094802C /* UIButton.swift in Sources */,
+				05222CA321EE47850094802C /* UserProfileViewController.swift in Sources */,
+				05222C9921EE37740094802C /* CreateUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

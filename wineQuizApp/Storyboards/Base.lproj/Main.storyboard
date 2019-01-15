@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZKm-VC-1ua">
             <objects>
-                <navigationController id="SLg-D7-VAS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Logout" id="SLg-D7-VAS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="90s-Zr-5Fd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,7 +40,7 @@
                                 <color key="textColor" red="0.97647970910000004" green="0.97645872830000002" blue="0.97646290059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQZ-TQ-Nom">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQZ-TQ-Nom" customClass="RoundedButton" customModule="wineQuizApp" customModuleProvider="target">
                                 <rect key="frame" x="44" y="363.5" width="327" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nRr-1D-dGw"/>
@@ -56,7 +56,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="nUO-r5-aw0" kind="show" id="Xhi-yu-442"/>
+                                    <action selector="LoginButtonPressed:" destination="Pci-j5-c1R" eventType="touchUpInside" id="E2s-o9-W9C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCE-ii-Ctj">
@@ -65,6 +65,9 @@
                                 <state key="normal" title="Forgot Your Password? ">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ForgotPasswordButtonPressed:" destination="Pci-j5-c1R" eventType="touchUpInside" id="jtx-FO-gCN"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdH-VM-gEG">
                                 <rect key="frame" x="44" y="313.5" width="327" height="25"/>
@@ -109,6 +112,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="RegisterButtonPressed:" destination="Pci-j5-c1R" eventType="touchUpInside" id="DvQ-a1-dlA"/>
                                     <segue destination="Qpn-LG-1kA" kind="show" id="sCn-Ef-lfM"/>
                                 </connections>
                             </button>
@@ -192,6 +196,13 @@
                     <navigationItem key="navigationItem" id="hau-pe-zQR">
                         <barButtonItem key="backBarButtonItem" title="Login" id="Pm1-OW-Ebz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="EmailTextField" destination="2tK-IL-VOA" id="8fZ-2w-9GZ"/>
+                        <outlet property="PasswordTextField" destination="NdH-VM-gEG" id="gYt-cM-yzk"/>
+                        <outlet property="dividerLabel1" destination="OcZ-HU-6yd" id="WsU-wY-Yt7"/>
+                        <outlet property="dividerLabel2" destination="wjt-gN-geb" id="bHa-R8-fTN"/>
+                        <segue destination="nUO-r5-aw0" kind="show" identifier="toUserScreens" id="sN6-tE-Ecv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4g-8T-QIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="1074" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Create User View Controller-->
         <scene sceneID="oBl-3p-eyA">
             <objects>
-                <viewController id="Qpn-LG-1kA" sceneMemberID="viewController">
+                <viewController id="Qpn-LG-1kA" customClass="CreateUserViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="axs-0n-3zh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,6 +299,10 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerUserButtonPressed:" destination="Qpn-LG-1kA" eventType="touchUpInside" id="Qp9-Jv-Qle"/>
+                                    <segue destination="dMT-2k-IUs" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSegue:" id="8q3-jf-TYJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your New Account " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-dA-w1Q">
                                 <rect key="frame" x="44" y="168" width="327" height="27"/>
@@ -338,8 +353,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gyO-PU-pDM"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmEmailTextfield" destination="wkl-nG-4Hg" id="1X7-Fq-6Ib"/>
+                        <outlet property="confirmPasswordText" destination="JsL-LM-ycT" id="bku-7J-0LE"/>
+                        <outlet property="emailTextfield" destination="JbL-dc-CMk" id="HAa-ik-VB0"/>
+                        <outlet property="passwordTextField" destination="wHY-tC-guc" id="4Qc-I8-pF4"/>
+                        <outlet property="usernameTextField" destination="3EG-6S-vdQ" id="mva-mg-mbk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEp-Oj-kBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dMT-2k-IUs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="435" y="818"/>
         </scene>
