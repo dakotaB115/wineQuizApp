@@ -301,7 +301,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerUserButtonPressed:" destination="Qpn-LG-1kA" eventType="touchUpInside" id="Qp9-Jv-Qle"/>
-                                    <segue destination="dMT-2k-IUs" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSegue:" id="8q3-jf-TYJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your New Account " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-dA-w1Q">
@@ -359,6 +358,7 @@
                         <outlet property="emailTextfield" destination="JbL-dc-CMk" id="HAa-ik-VB0"/>
                         <outlet property="passwordTextField" destination="wHY-tC-guc" id="4Qc-I8-pF4"/>
                         <outlet property="usernameTextField" destination="3EG-6S-vdQ" id="mva-mg-mbk"/>
+                        <segue destination="dMT-2k-IUs" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSegue:" id="tkf-70-d6H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEp-Oj-kBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
