@@ -20,16 +20,15 @@
 		05222CA521EE479E0094802C /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA421EE479E0094802C /* MessagingViewController.swift */; };
 		05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA621EE47EF0094802C /* LeaderboardsViewController.swift */; };
 		05222CA921EE48000094802C /* QuizzesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CA821EE48000094802C /* QuizzesViewController.swift */; };
-		05222CAC21EE758D0094802C /* QuizViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAB21EE758D0094802C /* QuizViewCell.swift */; };
-		05222CAE21EE75AA0094802C /* LeaderboardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAD21EE75AA0094802C /* LeaderboardViewCell.swift */; };
-		05222CB021EE75C90094802C /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAF21EE75C90094802C /* ContactsViewCell.swift */; };
 		05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB121EE78AD0094802C /* ContactsViewController.swift */; };
 		05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB321EE790E0094802C /* QuizzViewController.swift */; };
 		05222CB821F14C820094802C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB721F14C820094802C /* GlobalVariables.swift */; };
+		05222CBC21F162810094802C /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CBB21F162810094802C /* LeaderboardTableViewCell.swift */; };
 		052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F7FF321EA990D00F4636D /* AppDelegate.swift */; };
 		052F7FF921EA990E00F4636D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FF721EA990E00F4636D /* Main.storyboard */; };
 		052F7FFB21EA990F00F4636D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FFA21EA990F00F4636D /* Assets.xcassets */; };
 		052F7FFE21EA990F00F4636D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FFC21EA990F00F4636D /* LaunchScreen.storyboard */; };
+		05A1561021F167E9009B0304 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1560F21F167E9009B0304 /* Leaderboard.swift */; };
 		D7D89644826A7E58A239E43B /* Pods_wineQuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FABF34AFEAA756F84FDC32 /* Pods_wineQuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,18 +46,17 @@
 		05222CA421EE479E0094802C /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		05222CA621EE47EF0094802C /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
 		05222CA821EE48000094802C /* QuizzesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesViewController.swift; sourceTree = "<group>"; };
-		05222CAB21EE758D0094802C /* QuizViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewCell.swift; sourceTree = "<group>"; };
-		05222CAD21EE75AA0094802C /* LeaderboardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewCell.swift; sourceTree = "<group>"; };
-		05222CAF21EE75C90094802C /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
 		05222CB121EE78AD0094802C /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		05222CB321EE790E0094802C /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 		05222CB721F14C820094802C /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		05222CBB21F162810094802C /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		052F7FF021EA990D00F4636D /* wineQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wineQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		052F7FF321EA990D00F4636D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		052F7FF821EA990E00F4636D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		052F7FFA21EA990F00F4636D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		052F7FFD21EA990F00F4636D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		052F7FFF21EA990F00F4636D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A1560F21F167E9009B0304 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		274ADEBB19381C9904D02023 /* Pods-wineQuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wineQuizApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp.release.xcconfig"; sourceTree = "<group>"; };
 		616F9999EA36387F7A22F6D8 /* Pods-wineQuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wineQuizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F2FABF34AFEAA756F84FDC32 /* Pods_wineQuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wineQuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +126,7 @@
 		051E356D21EBD23E006F3C29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05A1560F21F167E9009B0304 /* Leaderboard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,9 +134,7 @@
 		05222CAA21EE750F0094802C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				05222CAB21EE758D0094802C /* QuizViewCell.swift */,
-				05222CAD21EE75AA0094802C /* LeaderboardViewCell.swift */,
-				05222CAF21EE75C90094802C /* ContactsViewCell.swift */,
+				05222CBB21F162810094802C /* LeaderboardTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -340,19 +337,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05222CAE21EE75AA0094802C /* LeaderboardViewCell.swift in Sources */,
 				05222CA921EE48000094802C /* QuizzesViewController.swift in Sources */,
+				05222CBC21F162810094802C /* LeaderboardTableViewCell.swift in Sources */,
 				05222C9221ECF7540094802C /* Create Line.swift in Sources */,
 				05222CA121EE417C0094802C /* NavControllerExtensions.swift in Sources */,
 				05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */,
-				05222CAC21EE758D0094802C /* QuizViewCell.swift in Sources */,
 				05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */,
 				05222C9F21EE3CC40094802C /* UIColor.swift in Sources */,
 				05222CA521EE479E0094802C /* MessagingViewController.swift in Sources */,
 				05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */,
-				05222CB021EE75C90094802C /* ContactsViewCell.swift in Sources */,
 				052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */,
 				05222CB821F14C820094802C /* GlobalVariables.swift in Sources */,
+				05A1561021F167E9009B0304 /* Leaderboard.swift in Sources */,
 				05222C9121ECF7540094802C /* UITextField.swift in Sources */,
 				05222C9521ED1D530094802C /* LoginViewController.swift in Sources */,
 				05222C9321ECF7540094802C /* UIButton.swift in Sources */,
