@@ -43,6 +43,17 @@ class CreateUserViewController: UIViewController {
         }
     }
     
+    func applicationWillTerminate(_ application: UIApplication) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("logged out")
+            self.performSegue(withIdentifier: "logout", sender: self)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
     private var authUser : User? {
         return Auth.auth().currentUser
     }

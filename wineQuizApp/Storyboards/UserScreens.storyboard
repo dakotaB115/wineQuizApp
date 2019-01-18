@@ -108,10 +108,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-cq-trN">
-                                <rect key="frame" x="169" y="548" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-cq-trN">
+                                <rect key="frame" x="44" y="343" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total percent of questions correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2O-kR-9XF">
+                                <rect key="frame" x="44" y="427" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNH-84-O4A">
+                                <rect key="frame" x="50" y="295" width="71" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your username: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ted-gg-cbh">
+                                <rect key="frame" x="44" y="259" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back &quot;username&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-3L-0l5">
+                                <rect key="frame" x="44" y="118" width="326" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-0m-mDF">
+                                <rect key="frame" x="44" y="205" width="326" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,17 +158,68 @@
                                     <action selector="logoutButtonPressed:" destination="PnI-uQ-twS" eventType="touchUpInside" id="AxO-ON-nsF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6r-kJ-nba">
+                                <rect key="frame" x="50" y="379" width="37" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDx-zY-sWY">
+                                <rect key="frame" x="50" y="463" width="53" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total number of quizzes taken:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFF-wg-uR5">
+                                <rect key="frame" x="44" y="511" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXH-sk-bcR">
+                                <rect key="frame" x="50" y="547" width="56" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1423170865" green="0.17536127570000001" blue="0.41962963339999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="SNH-84-O4A" firstAttribute="top" secondItem="Ted-gg-cbh" secondAttribute="bottom" constant="15" id="4Bf-hk-5wc"/>
+                            <constraint firstItem="q6r-kJ-nba" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="50" id="4OB-9D-FxM"/>
+                            <constraint firstItem="Gjf-qn-bVE" firstAttribute="trailing" secondItem="eNW-0m-mDF" secondAttribute="trailing" constant="44" id="7n8-99-nWw"/>
                             <constraint firstItem="Gjf-qn-bVE" firstAttribute="bottom" secondItem="pAa-Ir-sDh" secondAttribute="bottom" constant="30" id="AYk-uo-rgw"/>
+                            <constraint firstItem="gtb-cq-trN" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="44" id="Bug-ar-LTM"/>
+                            <constraint firstItem="eNW-0m-mDF" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="44" id="H5Q-Kf-VcN"/>
+                            <constraint firstItem="q6r-kJ-nba" firstAttribute="top" secondItem="gtb-cq-trN" secondAttribute="bottom" constant="15" id="N4K-YP-ckm"/>
                             <constraint firstItem="Gjf-qn-bVE" firstAttribute="trailing" secondItem="pAa-Ir-sDh" secondAttribute="trailing" constant="16" id="ND2-mD-zod"/>
+                            <constraint firstItem="eNW-0m-mDF" firstAttribute="top" secondItem="fPy-3L-0l5" secondAttribute="bottom" constant="60" id="Nl4-Bx-Oya"/>
+                            <constraint firstItem="b2O-kR-9XF" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="44" id="QJt-DQ-bTq"/>
+                            <constraint firstItem="Ted-gg-cbh" firstAttribute="top" secondItem="eNW-0m-mDF" secondAttribute="bottom" constant="30" id="Rq8-1h-rls"/>
+                            <constraint firstItem="gtb-cq-trN" firstAttribute="top" secondItem="SNH-84-O4A" secondAttribute="bottom" constant="30" id="ULT-Bf-wY9"/>
                             <constraint firstItem="pAa-Ir-sDh" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="16" id="VN7-an-UIX"/>
+                            <constraint firstItem="SDx-zY-sWY" firstAttribute="top" secondItem="b2O-kR-9XF" secondAttribute="bottom" constant="15" id="YFE-rH-pWX"/>
+                            <constraint firstItem="SDx-zY-sWY" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="50" id="aSj-rC-0UW"/>
+                            <constraint firstItem="AFF-wg-uR5" firstAttribute="top" secondItem="SDx-zY-sWY" secondAttribute="bottom" constant="30" id="btb-dd-aq1"/>
+                            <constraint firstItem="SNH-84-O4A" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="50" id="dGY-hv-kcI"/>
+                            <constraint firstItem="fPy-3L-0l5" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="44" id="eSg-rF-Hhz"/>
+                            <constraint firstItem="zXH-sk-bcR" firstAttribute="top" secondItem="AFF-wg-uR5" secondAttribute="bottom" constant="15" id="fi0-ta-iXP"/>
+                            <constraint firstItem="AFF-wg-uR5" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="44" id="gJr-jh-Txp"/>
+                            <constraint firstItem="fPy-3L-0l5" firstAttribute="top" secondItem="Gjf-qn-bVE" secondAttribute="top" constant="30" id="gPk-1T-E3e"/>
+                            <constraint firstItem="Gjf-qn-bVE" firstAttribute="trailing" secondItem="fPy-3L-0l5" secondAttribute="trailing" constant="44" id="kax-Ai-4db"/>
+                            <constraint firstItem="b2O-kR-9XF" firstAttribute="top" secondItem="q6r-kJ-nba" secondAttribute="bottom" constant="30" id="nVY-P9-E3a"/>
+                            <constraint firstItem="Ted-gg-cbh" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="44" id="ppK-hH-OeN"/>
+                            <constraint firstItem="zXH-sk-bcR" firstAttribute="leading" secondItem="Gjf-qn-bVE" secondAttribute="leading" constant="50" id="sBm-cJ-wo4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gjf-qn-bVE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="User Profile" id="Qkr-Fe-Obn"/>
                     <connections>
+                        <outlet property="emailLabel" destination="q6r-kJ-nba" id="zGg-5g-zpO"/>
+                        <outlet property="numberOfQuizzesTakenLabel" destination="zXH-sk-bcR" id="8hC-iH-Cni"/>
+                        <outlet property="percentCorrectLabel" destination="SDx-zY-sWY" id="Rc8-Hf-oFe"/>
+                        <outlet property="usernameLabel" destination="SNH-84-O4A" id="zmM-tW-RKa"/>
+                        <outlet property="welcomeUserLabel" destination="fPy-3L-0l5" id="iO6-uJ-x2M"/>
                         <segue destination="m73-Fj-lDK" kind="show" identifier="logout" id="joX-Bv-REx"/>
                     </connections>
                 </viewController>

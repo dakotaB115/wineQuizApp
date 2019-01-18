@@ -25,6 +25,7 @@
 		05222CB021EE75C90094802C /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CAF21EE75C90094802C /* ContactsViewCell.swift */; };
 		05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB121EE78AD0094802C /* ContactsViewController.swift */; };
 		05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB321EE790E0094802C /* QuizzViewController.swift */; };
+		05222CB821F14C820094802C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05222CB721F14C820094802C /* GlobalVariables.swift */; };
 		052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F7FF321EA990D00F4636D /* AppDelegate.swift */; };
 		052F7FF921EA990E00F4636D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FF721EA990E00F4636D /* Main.storyboard */; };
 		052F7FFB21EA990F00F4636D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FFA21EA990F00F4636D /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		05222CAF21EE75C90094802C /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
 		05222CB121EE78AD0094802C /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		05222CB321EE790E0094802C /* QuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
+		05222CB721F14C820094802C /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		052F7FF021EA990D00F4636D /* wineQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wineQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		052F7FF321EA990D00F4636D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		052F7FF821EA990E00F4636D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				052F7FFA21EA990F00F4636D /* Assets.xcassets */,
 				051E356621EBCFCF006F3C29 /* GoogleService-Info.plist */,
+				05222CB721F14C820094802C /* GlobalVariables.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */,
 				05222CB021EE75C90094802C /* ContactsViewCell.swift in Sources */,
 				052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */,
+				05222CB821F14C820094802C /* GlobalVariables.swift in Sources */,
 				05222C9121ECF7540094802C /* UITextField.swift in Sources */,
 				05222C9521ED1D530094802C /* LoginViewController.swift in Sources */,
 				05222C9321ECF7540094802C /* UIButton.swift in Sources */,

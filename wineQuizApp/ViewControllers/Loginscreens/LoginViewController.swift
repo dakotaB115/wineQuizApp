@@ -53,6 +53,17 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func applicationWillTerminate(_ application: UIApplication) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            print("logged out")
+            self.performSegue(withIdentifier: "logout", sender: self)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
     func displayError(title: String, message: String) {
         let title = title
         let message = message
@@ -92,45 +103,31 @@ class LoginViewController: UIViewController {
     @IBAction func LoginButtonPressed(_ sender: Any) {
         let auth = Auth.auth()
         
-        guard let user = auth.currentUser else {
-            print("No auth / user")
-            return
-        }
-        
-        let userEmail = EmailTextField.text
-        
-        guard user.isEmailVerified else {
-            print("Email not verified")
-            let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(userEmail).", preferredStyle: .alert)
-            let alertActionOkay = UIAlertAction(title: "Okay", style: .default) {
-                (_) in
-                user.sendEmailVerification(completion: nil)
-            }
-            let alertActionCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-            
-            alertVC.addAction(alertActionOkay)
-            alertVC.addAction(alertActionCancel)
-            self.present(alertVC, animated: true, completion: nil)            
-            return
-        }
-        
         guard let email = EmailTextField.text, let password = PasswordTextField.text else {
             print("No email or password")
             return
         }
         
-        auth.signIn(withEmail: email, password: password) { user, error in
-            if let error = error {
-                self.displayError(title: "Email/password is wrong or user does not exist", message: "\(error)")
-                print("Email/password is wrong or user does not exist, error: \(error)")
-            } else {
-                print("Successful login.")
-                let userID = Auth.auth().currentUser!.uid
-                print ("Email verified. Signing in...")
-                self.performSegue(withIdentifier: "toUserScreens", sender: self)
-                self.ref?.child("users").child(userID).child("verified").setValue(true)
+        Auth.auth().signIn(withEmail: email, password: password) {
+            (user, error) in
+            if let user = Auth.auth().currentUser {
+                if !user.isEmailVerified{
+                    let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(email).", preferredStyle: .alert)
+                    let alertActionOkay = UIAlertAction(title: "Okay", style: .default) {
+                        (_) in
+                        user.sendEmailVerification(completion: nil)
+                    }
+                    let alertActionCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                    
+                    alertVC.addAction(alertActionOkay)
+                    alertVC.addAction(alertActionCancel)
+                    self.present(alertVC, animated: true, completion: nil)
+                } else {
+                    self.performSegue(withIdentifier: "toUserScreens", sender: self)
+                }
             }
         }
+        
     }
     
     @IBAction func ForgotPasswordButtonPressed(_ sender: Any) {
