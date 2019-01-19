@@ -1,37 +1,37 @@
 //
-//  Leaderboard.swift
+//  Contacts.swift
 //  wineQuizApp
 //
-//  Created by Dakota Brown on 1/17/19.
+//  Created by Dakota Brown on 1/18/19.
 //  Copyright © 2019 Dakota Brown. All rights reserved.
 //
 
 import Foundation
 import Firebase
 
-struct Leaderboard {
+struct Contact {
     let username: String
-    let score: String
-    let number: Int
+    let email: String
+    let userID: String
     
-    init(username: String, score: String, number: Int) {
+    init(username: String, email: String, userId: String) {
         self.username = username
-        self.score = score
-        self.number = number
+        self.email = email
+        self.userID = userId
     }
     
     init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
-        score = snapshotValue["score"] as! String
+        email = snapshotValue["email"] as! String
         username = snapshotValue["username"] as! String
-        number = snapshotValue["number"] as! Int
+        userID = snapshotValue["userID"] as! String
     }
     
     func toAnyObject() -> Any {
         return [
-            "score": score,
+            "email": email,
             "username": username,
-            "number": number
+            "userID": userID
         ]
     }
 }

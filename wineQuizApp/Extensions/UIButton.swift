@@ -23,3 +23,19 @@ class RoundedButton: UIButton {
         layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.white.cgColor
     }
 }
+
+class RoundedButton2: UIButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.borderWidth = 1/UIScreen.main.nativeScale
+        contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        titleLabel?.adjustsFontForContentSizeCategory = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = frame.height/5
+        layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.white.cgColor
+    }
+}

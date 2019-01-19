@@ -26,9 +26,9 @@ class LoginViewController: UIViewController {
         return .lightContent
     }
     
-    private var authUser : User? {
+    /*private var authUser : User? {
         return Auth.auth().currentUser
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,20 +47,10 @@ class LoginViewController: UIViewController {
         
         navigationController?.navigationBar.barTintColor = newSwiftColor
         self.setNeedsStatusBarAppearanceUpdate()
-        ref = Database.database().reference()
-        ref.child("users").observe(.value) { (snapshot: DataSnapshot!) in
-            self.newUser = Int(snapshot.childrenCount)
-        }
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            print("logged out")
-            self.performSegue(withIdentifier: "logout", sender: self)
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "toUserScreens", sender: self)
+        } else {
+            
         }
     }
     
@@ -108,9 +98,9 @@ class LoginViewController: UIViewController {
             return
         }
         
-        Auth.auth().signIn(withEmail: email, password: password) {
+        auth.signIn(withEmail: email, password: password) {
             (user, error) in
-            if let user = Auth.auth().currentUser {
+            if let user = auth.currentUser {
                 if !user.isEmailVerified{
                     let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(email).", preferredStyle: .alert)
                     let alertActionOkay = UIAlertAction(title: "Okay", style: .default) {
@@ -127,7 +117,6 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func ForgotPasswordButtonPressed(_ sender: Any) {

@@ -32,6 +32,7 @@ class UserProfileViewController: UIViewController {
             self.usernameLabel.text = usernameSnap
             self.emailLabel.text = emailSnap
             self.numberOfQuizzesTakenLabel.text = String(numberOfQuizzesSnap)
+            username = usernameSnap
         })
         ref?.child("users").child(userID).child("QuizScores").observeSingleEvent(of: .value, with: { (snapshot) in
             
@@ -47,6 +48,8 @@ class UserProfileViewController: UIViewController {
         
         ref = Database.database().reference()
         userData()
+        userID2 = String(userID)
+        print(userID2)
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {

@@ -7,5 +7,17 @@
 //
 
 import Foundation
+import Firebase
 
-let quizType: String = ""
+var quizType: String = ""
+var userID2: String = ""
+var username: String = ""
+
+var choiceOne: String = ""
+var choiceTwo: String = ""
+var choiceThree: String = ""
+var choiceFour: String = ""
+var question: String = ""
+var correctAnswer: String = ""
+var hasTaken: Bool = false
+var numberOfQuizzesTaken: Int = 0

@@ -29,6 +29,10 @@
 		052F7FFB21EA990F00F4636D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FFA21EA990F00F4636D /* Assets.xcassets */; };
 		052F7FFE21EA990F00F4636D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052F7FFC21EA990F00F4636D /* LaunchScreen.storyboard */; };
 		05A1561021F167E9009B0304 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1560F21F167E9009B0304 /* Leaderboard.swift */; };
+		05A1561221F2400F009B0304 /* QuizzTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561121F2400F009B0304 /* QuizzTableViewCell.swift */; };
+		05A1561421F24025009B0304 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561321F24025009B0304 /* ContactsTableViewCell.swift */; };
+		05A1561621F2403C009B0304 /* Quizz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561521F2403C009B0304 /* Quizz.swift */; };
+		05A1561821F2404A009B0304 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561721F2404A009B0304 /* Contacts.swift */; };
 		D7D89644826A7E58A239E43B /* Pods_wineQuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FABF34AFEAA756F84FDC32 /* Pods_wineQuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,10 @@
 		052F7FFD21EA990F00F4636D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		052F7FFF21EA990F00F4636D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05A1560F21F167E9009B0304 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		05A1561121F2400F009B0304 /* QuizzTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzTableViewCell.swift; sourceTree = "<group>"; };
+		05A1561321F24025009B0304 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		05A1561521F2403C009B0304 /* Quizz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz.swift; sourceTree = "<group>"; };
+		05A1561721F2404A009B0304 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		274ADEBB19381C9904D02023 /* Pods-wineQuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wineQuizApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp.release.xcconfig"; sourceTree = "<group>"; };
 		616F9999EA36387F7A22F6D8 /* Pods-wineQuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wineQuizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F2FABF34AFEAA756F84FDC32 /* Pods_wineQuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wineQuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				05A1560F21F167E9009B0304 /* Leaderboard.swift */,
+				05A1561521F2403C009B0304 /* Quizz.swift */,
+				05A1561721F2404A009B0304 /* Contacts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				05222CBB21F162810094802C /* LeaderboardTableViewCell.swift */,
+				05A1561121F2400F009B0304 /* QuizzTableViewCell.swift */,
+				05A1561321F24025009B0304 /* ContactsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -344,8 +356,11 @@
 				05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */,
 				05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */,
 				05222C9F21EE3CC40094802C /* UIColor.swift in Sources */,
+				05A1561221F2400F009B0304 /* QuizzTableViewCell.swift in Sources */,
 				05222CA521EE479E0094802C /* MessagingViewController.swift in Sources */,
+				05A1561621F2403C009B0304 /* Quizz.swift in Sources */,
 				05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */,
+				05A1561421F24025009B0304 /* ContactsTableViewCell.swift in Sources */,
 				052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */,
 				05222CB821F14C820094802C /* GlobalVariables.swift in Sources */,
 				05A1561021F167E9009B0304 /* Leaderboard.swift in Sources */,
@@ -354,6 +369,7 @@
 				05222C9321ECF7540094802C /* UIButton.swift in Sources */,
 				05222CA321EE47850094802C /* UserProfileViewController.swift in Sources */,
 				05222C9921EE37740094802C /* CreateUserViewController.swift in Sources */,
+				05A1561821F2404A009B0304 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

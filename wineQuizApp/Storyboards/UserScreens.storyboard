@@ -38,15 +38,46 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8qn-D2-uzM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quizViewCell" id="8qn-D2-uzM" customClass="QuizzTableViewCell" customModule="wineQuizApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qn-D2-uzM" id="Tkr-tR-h8r">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52m-WK-p3f">
+                                                    <rect key="frame" x="20" y="11" width="35" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-iU-bLc" customClass="RoundedButton" customModule="wineQuizApp" customModuleProvider="target">
+                                                    <rect key="frame" x="300" y="7" width="94" height="30"/>
+                                                    <state key="normal" title="Take this quiz"/>
+                                                    <connections>
+                                                        <action selector="takeThisQuizButton:" destination="8qn-D2-uzM" eventType="touchUpInside" id="eJA-aM-he1"/>
+                                                        <segue destination="PeV-Wu-u3U" kind="show" id="J8z-Nb-lXc"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="52m-WK-p3f" firstAttribute="top" secondItem="Tkr-tR-h8r" secondAttribute="topMargin" id="F3O-Xk-8K0"/>
+                                                <constraint firstItem="GPA-iU-bLc" firstAttribute="top" secondItem="Tkr-tR-h8r" secondAttribute="top" constant="7" id="HLS-9Q-t9A"/>
+                                                <constraint firstAttribute="bottom" secondItem="GPA-iU-bLc" secondAttribute="bottom" constant="6.5" id="KhM-Sd-BLb"/>
+                                                <constraint firstItem="52m-WK-p3f" firstAttribute="leading" secondItem="Tkr-tR-h8r" secondAttribute="leadingMargin" id="Kpv-88-X4p"/>
+                                                <constraint firstAttribute="trailing" secondItem="GPA-iU-bLc" secondAttribute="trailing" constant="20" id="WAQ-IP-OgB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="52m-WK-p3f" secondAttribute="bottom" constant="1" id="YNh-fZ-l0f"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="quizLabel" destination="52m-WK-p3f" id="VBS-47-2uV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2LV-96-cUa" id="UQg-ZZ-5Ei"/>
+                                    <outlet property="delegate" destination="2LV-96-cUa" id="hTH-ps-EYh"/>
+                                </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nVZ-6a-3Yj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
@@ -68,7 +99,7 @@
                     <tabBarItem key="tabBarItem" title="Wine Quizzes" id="TBx-PX-lMY"/>
                     <navigationItem key="navigationItem" title="Title" id="mRo-t0-tdD"/>
                     <connections>
-                        <segue destination="PeV-Wu-u3U" kind="show" id="oyG-OJ-YXL"/>
+                        <outlet property="quizTableView" destination="TJ2-Zw-KIg" id="WjV-s3-ZwK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4X-Lc-5kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,13 +113,132 @@
                     <view key="view" contentMode="scaleToFill" id="AGT-79-d8i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6m0-KI-cDK">
+                                <rect key="frame" x="16" y="612" width="382" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6TC-Kh-2Ho">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBu-jz-A3g" customClass="RoundedButton2" customModule="wineQuizApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="120"/>
+                                                <state key="normal" title="Option one"/>
+                                                <connections>
+                                                    <action selector="optionOneButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="tn3-en-ZV5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-FD-YQv" customClass="RoundedButton2" customModule="wineQuizApp" customModuleProvider="target">
+                                                <rect key="frame" x="196" y="0.0" width="186" height="120"/>
+                                                <state key="normal" title="Option Two"/>
+                                                <connections>
+                                                    <action selector="optionTwoButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="idW-Ot-pxO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZBu-jz-A3g" firstAttribute="width" secondItem="bZe-FD-YQv" secondAttribute="width" id="ebx-rA-cKX"/>
+                                            <constraint firstItem="ZBu-jz-A3g" firstAttribute="height" secondItem="bZe-FD-YQv" secondAttribute="height" id="ykZ-W6-ndK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SK1-He-HLE">
+                                        <rect key="frame" x="0.0" y="130" width="382" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1S8-09-lgm" customClass="RoundedButton2" customModule="wineQuizApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="120"/>
+                                                <state key="normal" title="Option Three"/>
+                                                <connections>
+                                                    <action selector="optionThreeButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="ImD-Ph-4eo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-Xf-6fD" customClass="RoundedButton2" customModule="wineQuizApp" customModuleProvider="target">
+                                                <rect key="frame" x="196" y="0.0" width="186" height="120"/>
+                                                <state key="normal" title="Option Four"/>
+                                                <connections>
+                                                    <action selector="OptionFourButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="wk0-xk-Bjp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1S8-09-lgm" firstAttribute="width" secondItem="5iR-Xf-6fD" secondAttribute="width" id="Bva-gf-9ta"/>
+                                            <constraint firstItem="1S8-09-lgm" firstAttribute="height" secondItem="5iR-Xf-6fD" secondAttribute="height" id="xbM-uv-nhH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6TC-Kh-2Ho" firstAttribute="width" secondItem="SK1-He-HLE" secondAttribute="width" id="SxC-Ea-kuT"/>
+                                    <constraint firstItem="6TC-Kh-2Ho" firstAttribute="height" secondItem="SK1-He-HLE" secondAttribute="height" id="ZPa-Ee-laX"/>
+                                    <constraint firstAttribute="height" constant="250" id="vuC-9B-H5W"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suf-L6-aae">
+                                <rect key="frame" x="16" y="133" width="382" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCc-b3-1ZQ">
+                                <rect key="frame" x="16" y="184" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-FH-ffC">
+                                <rect key="frame" x="16" y="425" width="90" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-X6-fG2">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions wrong:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-Je-c5m">
+                                        <rect key="frame" x="0.0" y="17" width="90" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-xW-ams">
+                                        <rect key="frame" x="0.0" y="34" width="90" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BCc-b3-1ZQ" firstAttribute="top" secondItem="suf-L6-aae" secondAttribute="bottom" constant="15" id="05g-TE-nit"/>
+                            <constraint firstItem="6m0-KI-cDK" firstAttribute="bottom" secondItem="MsT-Tr-NSS" secondAttribute="bottom" id="0PE-jC-urz"/>
+                            <constraint firstItem="Kwd-FH-ffC" firstAttribute="top" secondItem="BCc-b3-1ZQ" secondAttribute="bottom" constant="217" id="13T-4f-Tph"/>
+                            <constraint firstItem="MsT-Tr-NSS" firstAttribute="trailing" secondItem="suf-L6-aae" secondAttribute="trailing" constant="16" id="4oI-Jm-wxR"/>
+                            <constraint firstItem="suf-L6-aae" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="EHQ-E3-V3l"/>
+                            <constraint firstItem="Kwd-FH-ffC" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="MEG-Qo-V35"/>
+                            <constraint firstItem="MsT-Tr-NSS" firstAttribute="trailing" secondItem="6m0-KI-cDK" secondAttribute="trailing" constant="16" id="Mbn-rt-co4"/>
+                            <constraint firstItem="suf-L6-aae" firstAttribute="top" secondItem="MsT-Tr-NSS" secondAttribute="top" constant="45" id="OcZ-3z-J1R"/>
+                            <constraint firstItem="6m0-KI-cDK" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="S66-6v-YUl"/>
+                            <constraint firstItem="BCc-b3-1ZQ" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="Ydh-WI-VFG"/>
+                            <constraint firstItem="MsT-Tr-NSS" firstAttribute="trailing" secondItem="BCc-b3-1ZQ" secondAttribute="trailing" constant="16" id="jQp-uW-9n7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MsT-Tr-NSS"/>
                     </view>
+                    <connections>
+                        <outlet property="optionFour" destination="5iR-Xf-6fD" id="hjW-bD-xQy"/>
+                        <outlet property="optionOne" destination="ZBu-jz-A3g" id="Ja5-ZR-GOg"/>
+                        <outlet property="optionThree" destination="1S8-09-lgm" id="Cyw-ht-28O"/>
+                        <outlet property="optionTwo" destination="bZe-FD-YQv" id="eJm-QD-QCx"/>
+                        <outlet property="questionLabel" destination="BCc-b3-1ZQ" id="czT-2B-9pP"/>
+                        <outlet property="questionNumber" destination="TCI-X6-fG2" id="irD-1Z-Kvf"/>
+                        <outlet property="questionsCorrectLabel" destination="g0x-xW-ams" id="jkn-3B-l3W"/>
+                        <outlet property="questionsWrongLabel" destination="SQO-Je-c5m" id="Jb0-XZ-yfp"/>
+                        <outlet property="quizLabel" destination="suf-L6-aae" id="Gad-md-ftC"/>
+                        <segue destination="7OA-XA-KyX" kind="unwind" identifier="unwindToQuizzes" unwindAction="unwindToQuizzesWithSegue:" id="1gh-Vv-CKD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7k-BT-4kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7OA-XA-KyX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="757" y="1304"/>
+            <point key="canvasLocation" x="756.52173913043487" y="1303.7946428571429"/>
         </scene>
         <!--Main-->
         <scene sceneID="2iR-6X-Dgc">
@@ -240,7 +390,6 @@
                     <connections>
                         <segue destination="PnI-uQ-twS" kind="relationship" relationship="viewControllers" id="AUF-Gu-7HF"/>
                         <segue destination="2LV-96-cUa" kind="relationship" relationship="viewControllers" id="GFz-ZJ-fbG"/>
-                        <segue destination="CQv-89-6pF" kind="relationship" relationship="viewControllers" id="5tF-hW-UPU"/>
                         <segue destination="09n-yq-PRA" kind="relationship" relationship="viewControllers" id="jwY-lT-o2C"/>
                     </connections>
                 </tabBarController>
@@ -257,10 +406,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rq5-pg-Xr1">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S8Y-bq-Fu5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S8Y-bq-Fu5" customClass="ContactsTableViewCell" customModule="wineQuizApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S8Y-bq-Fu5" id="MDc-dz-bqT">
@@ -278,7 +427,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7V3-fa-rZo">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>

@@ -69,7 +69,6 @@ class CreateUserViewController: UIViewController {
             // Either the user is not available, or the user is already verified.
         }
     }
-    
     //displays an error on screen depending on when it's called
     func displayError(title: String, message: String) {
         let title = title
@@ -142,14 +141,18 @@ class CreateUserViewController: UIViewController {
             let userID = Auth.auth().currentUser!.uid
 
             self.sendVerificationMail()
-            //creates a new user in the database
-            self.ref?.child("users").child(userID).setValue(userID  )
+            //creates a new user in the database numberOfQuizzesTaken
+            self.ref?.child("users").child(userID).setValue(userID)
             self.ref?.child("users").child(userID).child("username").setValue(username)
             self.ref?.child("users").child(userID).child("email").setValue(userEmail)
             self.ref?.child("users").child(userID).child("verified").setValue(false)
             self.ref?.child("users").child(userID).child("isAdmin").setValue(false)
+            self.ref?.child("users").child(userID).child("userID").setValue(userID)
+            self.ref?.child("users").child(userID).child("numberOfQuizzesTaken").setValue(0)
+            self.ref?.child("users").child(userID).child("QuizScores").child("totalPercent").setValue(0)
+            self.ref?.child("users").child(userID).child("QuizScores").child("region").child("test").child("test").setValue(0)
         }
-        self.performSegue(withIdentifier: "unwindToLogin", sender: self)
+        self.displayError(title: "Verification email sent", message: "Please check your email")
     }
     
 }
