@@ -21,3 +21,5 @@ var question: String = ""
 var correctAnswer: String = ""
 var hasTaken: Bool = false
 var numberOfQuizzesTaken: Int = 0
+var incomingMessages: String = ""
+var outgoingMessages: String = ""

@@ -1,10 +1,7 @@
 PODS:
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
-  - Fabric (1.9.0)
-  - Firebase/AdMob (5.15.0):
-    - Firebase/Core
-    - Google-Mobile-Ads-SDK (~> 7.37)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - Firebase/Auth (5.15.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.2.0)
@@ -52,7 +49,6 @@ PODS:
     - GoogleUtilities/Environment (~> 5.2)
     - GoogleUtilities/Reachability (~> 5.2)
     - Protobuf (~> 3.1)
-  - Google-Mobile-Ads-SDK (7.37.0)
   - GoogleAppMeasurement (5.4.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -79,30 +75,25 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
   - leveldb-library (1.20)
-  - MessageInputBar/Core (0.4.1)
-  - MessageKit (2.0.0):
-    - MessageInputBar/Core
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - Crashlytics
-  - Fabric
-  - Firebase/AdMob
+  - ChameleonFramework
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
-  - MessageKit
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Crashlytics
-    - Fabric
+    - ChameleonFramework
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -112,19 +103,16 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseInstanceID
     - FirebaseMessaging
-    - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
-    - MessageInputBar
-    - MessageKit
     - nanopb
     - Protobuf
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
@@ -134,16 +122,14 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 0621689f77528d62b47e1c06ca737c4c19275d1a
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   FirebaseMessaging: b412996f6a09337d232bb3a6676ce4d1f353d024
-  Google-Mobile-Ads-SDK: d028682d7450749a1955679da050eaf70d997b3e
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
-  MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: e548db9397393b7e7fc74fd0ab70049067652314
+PODFILE CHECKSUM: e35a7e367ccbccd14fd1a0a3cfcca36490ff036b
 
 COCOAPODS: 1.5.3

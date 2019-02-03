@@ -33,6 +33,13 @@
 		05A1561421F24025009B0304 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561321F24025009B0304 /* ContactsTableViewCell.swift */; };
 		05A1561621F2403C009B0304 /* Quizz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561521F2403C009B0304 /* Quizz.swift */; };
 		05A1561821F2404A009B0304 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1561721F2404A009B0304 /* Contacts.swift */; };
+		05A3E95222063CC000097263 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E95122063CC000097263 /* CreateRoomViewController.swift */; };
+		05A3E95622063EFD00097263 /* OutgoingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E95522063EFD00097263 /* OutgoingTableViewCell.swift */; };
+		05A3E95822063F2D00097263 /* ReceivingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E95722063F2D00097263 /* ReceivingTableViewCell.swift */; };
+		05A3E96222065C4C00097263 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E96122065C4C00097263 /* Message.swift */; };
+		05A3E96422065C5900097263 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E96322065C5900097263 /* ChatViewController.swift */; };
+		05A3E96722065C7000097263 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3E96522065C6F00097263 /* CustomMessageCell.swift */; };
+		05A3E96822065C7000097263 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A3E96622065C6F00097263 /* MessageCell.xib */; };
 		D7D89644826A7E58A239E43B /* Pods_wineQuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FABF34AFEAA756F84FDC32 /* Pods_wineQuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,13 @@
 		05A1561321F24025009B0304 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		05A1561521F2403C009B0304 /* Quizz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz.swift; sourceTree = "<group>"; };
 		05A1561721F2404A009B0304 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		05A3E95122063CC000097263 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
+		05A3E95522063EFD00097263 /* OutgoingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTableViewCell.swift; sourceTree = "<group>"; };
+		05A3E95722063F2D00097263 /* ReceivingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivingTableViewCell.swift; sourceTree = "<group>"; };
+		05A3E96122065C4C00097263 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		05A3E96322065C5900097263 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		05A3E96522065C6F00097263 /* CustomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
+		05A3E96622065C6F00097263 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		274ADEBB19381C9904D02023 /* Pods-wineQuizApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wineQuizApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp.release.xcconfig"; sourceTree = "<group>"; };
 		616F9999EA36387F7A22F6D8 /* Pods-wineQuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wineQuizApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F2FABF34AFEAA756F84FDC32 /* Pods_wineQuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wineQuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +148,7 @@
 		051E356D21EBD23E006F3C29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05A3E96122065C4C00097263 /* Message.swift */,
 				05A1560F21F167E9009B0304 /* Leaderboard.swift */,
 				05A1561521F2403C009B0304 /* Quizz.swift */,
 				05A1561721F2404A009B0304 /* Contacts.swift */,
@@ -144,9 +159,13 @@
 		05222CAA21EE750F0094802C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				05A3E96522065C6F00097263 /* CustomMessageCell.swift */,
+				05A3E96622065C6F00097263 /* MessageCell.xib */,
 				05222CBB21F162810094802C /* LeaderboardTableViewCell.swift */,
 				05A1561121F2400F009B0304 /* QuizzTableViewCell.swift */,
 				05A1561321F24025009B0304 /* ContactsTableViewCell.swift */,
+				05A3E95522063EFD00097263 /* OutgoingTableViewCell.swift */,
+				05A3E95722063F2D00097263 /* ReceivingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -154,12 +173,14 @@
 		05222CB521EE7C890094802C /* Userscreens */ = {
 			isa = PBXGroup;
 			children = (
+				05A3E96322065C5900097263 /* ChatViewController.swift */,
 				05222CA221EE47850094802C /* UserProfileViewController.swift */,
 				05222CA421EE479E0094802C /* MessagingViewController.swift */,
 				05222CA621EE47EF0094802C /* LeaderboardsViewController.swift */,
 				05222CA821EE48000094802C /* QuizzesViewController.swift */,
 				05222CB121EE78AD0094802C /* ContactsViewController.swift */,
 				05222CB321EE790E0094802C /* QuizzViewController.swift */,
+				05A3E95122063CC000097263 /* CreateRoomViewController.swift */,
 			);
 			path = Userscreens;
 			sourceTree = "<group>";
@@ -284,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				052F7FFE21EA990F00F4636D /* LaunchScreen.storyboard in Resources */,
+				05A3E96822065C7000097263 /* MessageCell.xib in Resources */,
 				05222C9721ED1E540094802C /* UserScreens.storyboard in Resources */,
 				051E356721EBCFCF006F3C29 /* GoogleService-Info.plist in Resources */,
 				052F7FFB21EA990F00F4636D /* Assets.xcassets in Resources */,
@@ -301,21 +323,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-wineQuizApp/Pods-wineQuizApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
-				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -355,11 +377,16 @@
 				05222CA121EE417C0094802C /* NavControllerExtensions.swift in Sources */,
 				05222CB421EE790E0094802C /* QuizzViewController.swift in Sources */,
 				05222CB221EE78AD0094802C /* ContactsViewController.swift in Sources */,
+				05A3E95822063F2D00097263 /* ReceivingTableViewCell.swift in Sources */,
+				05A3E96222065C4C00097263 /* Message.swift in Sources */,
 				05222C9F21EE3CC40094802C /* UIColor.swift in Sources */,
+				05A3E96722065C7000097263 /* CustomMessageCell.swift in Sources */,
 				05A1561221F2400F009B0304 /* QuizzTableViewCell.swift in Sources */,
 				05222CA521EE479E0094802C /* MessagingViewController.swift in Sources */,
+				05A3E95222063CC000097263 /* CreateRoomViewController.swift in Sources */,
 				05A1561621F2403C009B0304 /* Quizz.swift in Sources */,
 				05222CA721EE47EF0094802C /* LeaderboardsViewController.swift in Sources */,
+				05A3E95622063EFD00097263 /* OutgoingTableViewCell.swift in Sources */,
 				05A1561421F24025009B0304 /* ContactsTableViewCell.swift in Sources */,
 				052F7FF421EA990D00F4636D /* AppDelegate.swift in Sources */,
 				05222CB821F14C820094802C /* GlobalVariables.swift in Sources */,
@@ -367,6 +394,7 @@
 				05222C9121ECF7540094802C /* UITextField.swift in Sources */,
 				05222C9521ED1D530094802C /* LoginViewController.swift in Sources */,
 				05222C9321ECF7540094802C /* UIButton.swift in Sources */,
+				05A3E96422065C5900097263 /* ChatViewController.swift in Sources */,
 				05222CA321EE47850094802C /* UserProfileViewController.swift in Sources */,
 				05222C9921EE37740094802C /* CreateUserViewController.swift in Sources */,
 				05A1561821F2404A009B0304 /* Contacts.swift in Sources */,
