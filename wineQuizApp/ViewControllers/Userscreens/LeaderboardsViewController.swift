@@ -20,7 +20,6 @@ class LeaderboardsViewController: UIViewController, UITableViewDelegate, UITable
             leaderboardTableView.reloadData()
         }
     }
-    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .default
     }
@@ -41,7 +40,8 @@ class LeaderboardsViewController: UIViewController, UITableViewDelegate, UITable
                 let user = Leaderboard(snapshot: userSnapshot as! DataSnapshot)
                 users.append(user)
             }
-            self.users = users
+            let highScores = users.sorted(by: { $0.number > $1.number})
+            self.users = highScores
         }
     }
     

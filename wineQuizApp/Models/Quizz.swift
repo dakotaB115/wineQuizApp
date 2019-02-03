@@ -19,6 +19,12 @@ struct Quizz {
     init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         quizz = snapshotValue["quizz"] as! String
+        Database.database().reference().child("Regions").child(quizz).observe(.value) { (snapshot: DataSnapshot!) in
+            numberOfUsers = Int(snapshot.childrenCount) - 1
+            print(numberOfUsers)
+        }
+        print(numberOfUsers)
+        
     }
     
     func toAnyObject() -> Any {

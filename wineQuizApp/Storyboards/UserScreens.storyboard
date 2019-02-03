@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-Zw-KIg">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quizViewCell" id="8qn-D2-uzM" customClass="QuizzTableViewCell" customModule="wineQuizApp" customModuleProvider="target">
@@ -79,20 +79,13 @@
                                     <outlet property="delegate" destination="2LV-96-cUa" id="hTH-ps-EYh"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nVZ-6a-3Yj">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nVZ-6a-3Yj" firstAttribute="trailing" secondItem="odG-mT-asc" secondAttribute="trailing" id="FPJ-xi-vq2"/>
-                            <constraint firstItem="TJ2-Zw-KIg" firstAttribute="top" secondItem="nVZ-6a-3Yj" secondAttribute="bottom" id="GY0-Wh-2EY"/>
+                            <constraint firstItem="TJ2-Zw-KIg" firstAttribute="top" secondItem="odG-mT-asc" secondAttribute="top" id="2XA-wu-LKY"/>
                             <constraint firstItem="TJ2-Zw-KIg" firstAttribute="trailing" secondItem="odG-mT-asc" secondAttribute="trailing" id="Jc1-GU-5VD"/>
-                            <constraint firstItem="nVZ-6a-3Yj" firstAttribute="leading" secondItem="odG-mT-asc" secondAttribute="leading" id="RIP-pX-nYy"/>
                             <constraint firstItem="TJ2-Zw-KIg" firstAttribute="bottom" secondItem="odG-mT-asc" secondAttribute="bottom" id="UBj-zB-V7p"/>
                             <constraint firstItem="TJ2-Zw-KIg" firstAttribute="leading" secondItem="odG-mT-asc" secondAttribute="leading" id="Xww-4o-jNe"/>
-                            <constraint firstItem="nVZ-6a-3Yj" firstAttribute="top" secondItem="odG-mT-asc" secondAttribute="top" id="ifa-RM-YlM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="odG-mT-asc"/>
                     </view>
@@ -110,7 +103,7 @@
         <scene sceneID="gil-s5-8xH">
             <objects>
                 <viewController id="PeV-Wu-u3U" customClass="QuizzViewController" customModule="wineQuizApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AGT-79-d8i">
+                    <view key="view" contentMode="scaleToFill" id="AGT-79-d8i" customClass="Quizz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -124,14 +117,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="120"/>
                                                 <state key="normal" title="Option one"/>
                                                 <connections>
-                                                    <action selector="optionOneButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="tn3-en-ZV5"/>
+                                                    <action selector="optionOneButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="f0a-pu-lfo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-FD-YQv" customClass="RoundedButton2" customModule="wineQuizApp" customModuleProvider="target">
                                                 <rect key="frame" x="196" y="0.0" width="186" height="120"/>
                                                 <state key="normal" title="Option Two"/>
                                                 <connections>
-                                                    <action selector="optionTwoButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="idW-Ot-pxO"/>
+                                                    <action selector="optionTwoButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="soe-0M-Dss"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -147,14 +140,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="120"/>
                                                 <state key="normal" title="Option Three"/>
                                                 <connections>
-                                                    <action selector="optionThreeButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="ImD-Ph-4eo"/>
+                                                    <action selector="optionThreeButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="lYt-RW-TJ4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-Xf-6fD" customClass="RoundedButton2" customModule="wineQuizApp" customModuleProvider="target">
                                                 <rect key="frame" x="196" y="0.0" width="186" height="120"/>
                                                 <state key="normal" title="Option Four"/>
                                                 <connections>
-                                                    <action selector="OptionFourButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="wk0-xk-Bjp"/>
+                                                    <action selector="optionFourButton:" destination="PeV-Wu-u3U" eventType="touchUpInside" id="lof-1Q-St1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -182,27 +175,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-FH-ffC">
-                                <rect key="frame" x="16" y="425" width="90" height="46"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mWy-Ii-1kX">
+                                <rect key="frame" x="20" y="386" width="101.5" height="46"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-X6-fG2">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions wrong:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-Je-c5m">
-                                        <rect key="frame" x="0.0" y="17" width="90" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-xW-ams">
-                                        <rect key="frame" x="0.0" y="34" width="90" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-FH-ffC">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-X6-fG2">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions wrong:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-Je-c5m">
+                                                <rect key="frame" x="0.0" y="17" width="90" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-xW-ams">
+                                                <rect key="frame" x="0.0" y="34" width="90" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-Fi-Mk5">
+                                        <rect key="frame" x="95" y="0.0" width="6.5" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otX-jj-xdt">
+                                                <rect key="frame" x="0.0" y="0.0" width="6.5" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAX-EL-Gft">
+                                                <rect key="frame" x="0.0" y="17" width="6.5" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzM-Bw-3g2">
+                                                <rect key="frame" x="0.0" y="34" width="6.5" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -210,28 +231,28 @@
                         <constraints>
                             <constraint firstItem="BCc-b3-1ZQ" firstAttribute="top" secondItem="suf-L6-aae" secondAttribute="bottom" constant="15" id="05g-TE-nit"/>
                             <constraint firstItem="6m0-KI-cDK" firstAttribute="bottom" secondItem="MsT-Tr-NSS" secondAttribute="bottom" id="0PE-jC-urz"/>
-                            <constraint firstItem="Kwd-FH-ffC" firstAttribute="top" secondItem="BCc-b3-1ZQ" secondAttribute="bottom" constant="217" id="13T-4f-Tph"/>
                             <constraint firstItem="MsT-Tr-NSS" firstAttribute="trailing" secondItem="suf-L6-aae" secondAttribute="trailing" constant="16" id="4oI-Jm-wxR"/>
                             <constraint firstItem="suf-L6-aae" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="EHQ-E3-V3l"/>
-                            <constraint firstItem="Kwd-FH-ffC" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="MEG-Qo-V35"/>
                             <constraint firstItem="MsT-Tr-NSS" firstAttribute="trailing" secondItem="6m0-KI-cDK" secondAttribute="trailing" constant="16" id="Mbn-rt-co4"/>
+                            <constraint firstItem="6m0-KI-cDK" firstAttribute="top" secondItem="mWy-Ii-1kX" secondAttribute="bottom" constant="180" id="N4H-sP-jSK"/>
                             <constraint firstItem="suf-L6-aae" firstAttribute="top" secondItem="MsT-Tr-NSS" secondAttribute="top" constant="45" id="OcZ-3z-J1R"/>
                             <constraint firstItem="6m0-KI-cDK" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="S66-6v-YUl"/>
                             <constraint firstItem="BCc-b3-1ZQ" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="16" id="Ydh-WI-VFG"/>
+                            <constraint firstItem="mWy-Ii-1kX" firstAttribute="leading" secondItem="MsT-Tr-NSS" secondAttribute="leading" constant="20" id="cPh-BP-6Rs"/>
                             <constraint firstItem="MsT-Tr-NSS" firstAttribute="trailing" secondItem="BCc-b3-1ZQ" secondAttribute="trailing" constant="16" id="jQp-uW-9n7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MsT-Tr-NSS"/>
                     </view>
                     <connections>
-                        <outlet property="optionFour" destination="5iR-Xf-6fD" id="hjW-bD-xQy"/>
-                        <outlet property="optionOne" destination="ZBu-jz-A3g" id="Ja5-ZR-GOg"/>
-                        <outlet property="optionThree" destination="1S8-09-lgm" id="Cyw-ht-28O"/>
-                        <outlet property="optionTwo" destination="bZe-FD-YQv" id="eJm-QD-QCx"/>
-                        <outlet property="questionLabel" destination="BCc-b3-1ZQ" id="czT-2B-9pP"/>
-                        <outlet property="questionNumber" destination="TCI-X6-fG2" id="irD-1Z-Kvf"/>
-                        <outlet property="questionsCorrectLabel" destination="g0x-xW-ams" id="jkn-3B-l3W"/>
-                        <outlet property="questionsWrongLabel" destination="SQO-Je-c5m" id="Jb0-XZ-yfp"/>
-                        <outlet property="quizLabel" destination="suf-L6-aae" id="Gad-md-ftC"/>
+                        <outlet property="QuestionLabel" destination="BCc-b3-1ZQ" id="rDu-E4-ZAz"/>
+                        <outlet property="QuizLabel" destination="suf-L6-aae" id="CcR-ag-Ipa"/>
+                        <outlet property="correctLabel" destination="jzM-Bw-3g2" id="mbv-P2-GNd"/>
+                        <outlet property="optionFour" destination="5iR-Xf-6fD" id="Ypq-M3-Yk8"/>
+                        <outlet property="optionOne" destination="ZBu-jz-A3g" id="Y2e-UQ-dLC"/>
+                        <outlet property="optionThree" destination="1S8-09-lgm" id="ctf-a6-FIG"/>
+                        <outlet property="optionTwo" destination="bZe-FD-YQv" id="z1Y-hy-tTM"/>
+                        <outlet property="questionNumberLabel" destination="otX-jj-xdt" id="UUA-lf-Lla"/>
+                        <outlet property="wrongLabel" destination="IAX-EL-Gft" id="IWJ-3z-qIM"/>
                         <segue destination="7OA-XA-KyX" kind="unwind" identifier="unwindToQuizzes" unwindAction="unwindToQuizzesWithSegue:" id="1gh-Vv-CKD"/>
                     </connections>
                 </viewController>
@@ -709,12 +730,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="o0o-3a-gTU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cme-zH-ZNp">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaderboardCell" rowHeight="60" id="44j-32-8oB" customClass="LeaderboardTableViewCell" customModule="wineQuizApp" customModuleProvider="target">
@@ -760,10 +777,7 @@
                         <constraints>
                             <constraint firstItem="cme-zH-ZNp" firstAttribute="trailing" secondItem="Xt0-xN-Q3V" secondAttribute="trailing" id="1Il-zI-f87"/>
                             <constraint firstItem="cme-zH-ZNp" firstAttribute="leading" secondItem="Xt0-xN-Q3V" secondAttribute="leading" id="Dsv-8o-Dcw"/>
-                            <constraint firstItem="o0o-3a-gTU" firstAttribute="trailing" secondItem="Xt0-xN-Q3V" secondAttribute="trailing" id="MNo-hs-pOD"/>
-                            <constraint firstItem="cme-zH-ZNp" firstAttribute="top" secondItem="o0o-3a-gTU" secondAttribute="bottom" id="U8y-iD-B9N"/>
-                            <constraint firstItem="o0o-3a-gTU" firstAttribute="top" secondItem="Xt0-xN-Q3V" secondAttribute="top" id="cvP-W0-UWF"/>
-                            <constraint firstItem="o0o-3a-gTU" firstAttribute="leading" secondItem="Xt0-xN-Q3V" secondAttribute="leading" id="k9d-br-OsU"/>
+                            <constraint firstItem="cme-zH-ZNp" firstAttribute="top" secondItem="Xt0-xN-Q3V" secondAttribute="top" id="VHY-pQ-lHT"/>
                             <constraint firstItem="cme-zH-ZNp" firstAttribute="bottom" secondItem="Xt0-xN-Q3V" secondAttribute="bottom" id="xKX-HX-QeL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xt0-xN-Q3V"/>
